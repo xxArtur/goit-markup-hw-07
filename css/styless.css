@@ -100,11 +100,12 @@ p {
   color: var(--backgroynd-color-two);
 }
 /* address */
-.address {
-  padding-top: 20px;
+.footer__address {
   color: var(--primary-white-color);
 }
-
+.address {
+  padding-top: 20px;
+}
 .info {
   margin-bottom: 9px;
   font-family: Roboto, sans-serif;
