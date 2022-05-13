@@ -1,1 +1,56 @@
- < !-- Меню --><section class="menu"><div class="container"><ul class="menu__list"><li class="menu__items"><button type="button" class="menu__button menu__button--active">Все</button></li><li class="menu__items"><button type="button" class="menu__button">Веб-сайты</button></li><li class="menu__items"><button type="button" class="menu__button">Приложения</button></li><li class="menu__items"><button type="button" class="menu__button">Дизайн</button></li><li class="menu__items"><button type="button" class="menu__button">Маркетинг</button></li></ul>
+/* Меню */
+
+.menu {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.menu__items {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+
+.menu__button {
+  color: var(--title-text-color);
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: 0;
+  background-color: var(--backgroynd-color-two);
+  transition: background-color 250ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu__button--active {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+
+.menu__button:hover,
+.menu__button:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  outline: 0px;
+  transition: background-color 250ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu__items:not(:last-child) {
+  margin-left: 0;
+  margin-right: 8px;
+}
