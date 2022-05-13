@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
 :root {
   --primary-white-color: #ffffff;
   --title-text-color: #212121;
@@ -65,13 +66,6 @@ Document
 /**
 Use a better box model (opinionated).
 */
-*,
-::before,
-::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 /**
 1. Correct the line height in all browsers.
 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -408,13 +402,11 @@ summary {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .page-header__link:hover {
   color: var(--accent-color);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .page-header__link:focus {
   color: var(--accent-color);
   outline: 1px solid var(--accent-color);
@@ -477,9 +469,7 @@ summary {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.page-header__item:hover,
-.page-header__item:focus {
+.page-header__item:hover, .page-header__item:focus {
   fill: var(--accent-color);
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -496,7 +486,6 @@ summary {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .button:hover {
   color: var(--accent-color);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -514,7 +503,6 @@ summary {
   letter-spacing: 0.06em;
   padding: 10px 32px 10px 32px;
 }
-
 .button.primary-top:hover {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -625,9 +613,7 @@ summary {
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.feature__icon:hover,
-.feature__icon:focus {
+.feature__icon:hover, .feature__icon:focus {
   border-color: var(--accent-color);
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -759,13 +745,6 @@ summary {
   fill: var(--oformleni-color);
 }
 
-.social__link:hover .social__icons,
-.social__link:focus .social__icons {
-  fill: var(--primary-white-color);
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .customers {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -810,24 +789,22 @@ summary {
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.box__link.on,
-.box__link:focus,
-.box__link:hover {
+.box__link:focus, .box__link:hover {
   border: 1px solid #2196f3;
   outline: 0px solid var(--accent-color);
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.box__link:focus .box__icon {
-  fill: var(--accent-color);
+.box__item:not(:last-child) {
+  margin-right: 30px;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.box__item:not(:last-child) {
-  margin-right: 30px;
+.box__item:not(:last-child):focus, .box__item:not(:last-child):hover .box__icon {
+  fill: var(--accent-color);
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .box__icon {
@@ -835,9 +812,7 @@ summary {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.box__icon:focus,
-.box__icon:hover {
+.box__icon:focus, .box__icon:hover {
   fill: var(--accent-color);
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -859,6 +834,7 @@ summary {
 /* address */
 .footer__address {
   color: var(--primary-white-color);
+  display: block;
 }
 
 .address {
@@ -935,17 +911,18 @@ summary {
   -webkit-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.social__link:hover,
-.social__link:focus {
+.social__link:hover, .social__link:focus {
   background: var(--accent-color);
   outline: 0;
   -webkit-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.social__link:hover .social-icon-comand,
-.social__link:focus .social-icon-comand {
+.social__link:hover .social__icons, .social__link:focus .social__icons {
+  fill: var(--primary-white-color);
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social__link:hover .social-icon-comand, .social__link:focus .social-icon-comand {
   fill: var(--primary-white-color);
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1047,7 +1024,7 @@ summary {
 /* Меню */
 .menu {
   padding-top: 94px;
-  padding-bottom: 94px;
+  padding-bottom: 50px;
 }
 
 .menu__list {
@@ -1057,7 +1034,6 @@ summary {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 50px;
 }
 
 .menu__items {
@@ -1084,14 +1060,7 @@ summary {
   -webkit-transition: background-color 250ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.menu__button--active {
-  background-color: var(--accent-color);
-  color: var(--primary-white-color);
-}
-
-.menu__button:hover,
-.menu__button:focus {
+.menu__button:hover, .menu__button:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -1101,6 +1070,11 @@ summary {
   transition: background-color 250ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.menu__button--active {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+
 .menu__items:not(:last-child) {
   margin-left: 0;
   margin-right: 8px;
@@ -1108,7 +1082,6 @@ summary {
 
 /* <-- група послуг --> */
 .services {
-  padding-top: 94px;
   padding-bottom: 94px;
 }
 
@@ -1130,8 +1103,7 @@ summary {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.services__item:hover .fon {
+.services__item:hover .services__fon {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   opacity: 1;
@@ -1140,17 +1112,7 @@ summary {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.services__item:hover {
-  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.services__item:focus {
+.services__item:hover, .services__item:focus {
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1212,6 +1174,8 @@ summary {
 }
 
 .services__name {
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -1355,7 +1319,6 @@ summary {
   -webkit-transition: stroke 250ms, fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: stroke 250ms, fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .close:hover {
   fill: var(--accent-color);
   stroke: var(--accent-color);
@@ -1365,6 +1328,14 @@ summary {
 
 .form__field {
   position: relative;
+}
+
+.form__field:focus {
+  background: var(--accent-color);
+  outline: 0;
+  fill: #2196f3;
+  -webkit-transition: fill 250ms, background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms, background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form__icon {
@@ -1382,17 +1353,7 @@ summary {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.form__field:focus {
-  background: var(--accent-color);
-  outline: 0;
-  fill: #2196f3;
-  -webkit-transition: fill 250ms, background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms, background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form__input:focus,
-.form__input:focus + .form__icon {
+.form__input:focus:focus, .form__input:focus:focus + .form__icon {
   outline: 0;
   -webkit-transition: background, fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background, fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1415,6 +1376,7 @@ summary {
 /* address */
 .footer__address {
   color: var(--primary-white-color);
+  display: block;
 }
 
 .address {
@@ -1491,17 +1453,18 @@ summary {
   -webkit-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.social__link:hover,
-.social__link:focus {
+.social__link:hover, .social__link:focus {
   background: var(--accent-color);
   outline: 0;
   -webkit-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.social__link:hover .social-icon-comand,
-.social__link:focus .social-icon-comand {
+.social__link:hover .social__icons, .social__link:focus .social__icons {
+  fill: var(--primary-white-color);
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social__link:hover .social-icon-comand, .social__link:focus .social-icon-comand {
   fill: var(--primary-white-color);
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);

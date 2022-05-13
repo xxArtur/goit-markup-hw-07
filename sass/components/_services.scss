@@ -1,7 +1,7 @@
 /* <-- група послуг --> */
 
 .services {
-  padding-top: 94px;
+
   padding-bottom: 94px;
 }
 
@@ -16,24 +16,17 @@
   margin-bottom: 30px;
   border: 0px solid var(--backgroynd-color-two);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.services__item:hover .fon {
-  transform: translateY(-100%);
-  opacity: 1;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.services__item:hover {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.services__item:focus {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover .services__fon {
+        transform: translateY(-100%);
+        opacity: 1;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      &:hover,
+      &:focus {
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+          0px 2px 2px rgba(0, 0, 0, 0.12);
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
 }
 
 .services__item img {
@@ -86,6 +79,8 @@
 }
 
 .services__name {
+  font-family: 'Roboto';
+  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -99,6 +94,5 @@
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-
   color: var(--text-color);
 }

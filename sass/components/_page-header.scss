@@ -64,17 +64,16 @@
   letter-spacing: 0.02em;
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.page-header__link:hover {
-  color: var(--accent-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.page-header__link:focus {
-  color: var(--accent-color);
-  outline: 1px solid var(--accent-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      color: var(--accent-color);
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+    &:focus {
+      color: var(--accent-color);
+      outline: 1px solid var(--accent-color);
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 
 .page-header__link:focus .page-header__icon--tell {
@@ -122,15 +121,13 @@
   justify-content: space-evenly;
   fill: var(--text-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+      fill: var(--accent-color);
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
-
-.page-header__item:hover,
-.page-header__item:focus {
-  fill: var(--accent-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
 
 .button {
   color: #757575;
@@ -141,11 +138,11 @@
   letter-spacing: 0.03em;
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.button:hover {
-  color: var(--accent-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+        color: var(--accent-color);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
 }
 
 .button.primary-top {
@@ -153,16 +150,15 @@
   background-color: var(--accent-color);
   border: none;
   border-radius: 4px;
-
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-
   letter-spacing: 0.06em;
   padding: 10px 32px 10px 32px;
+
+    &:hover {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
 }
 
-.button.primary-top:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
